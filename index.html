@@ -6,6 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media only screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  nav .absolute {
+    position: relative;
+    left: 0;
+    transform: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
+  nav .flex.space-x-8 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  nav a.flex.mr-10 {
+    margin-right: 0;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
+  /* Main section adjustments */
+  main {
+    padding: 2rem 1rem;
+  }
+  
+  main img {
+    width: 60%;
+    margin: 0 auto 2rem;
+  }
+  
+  main a.mt-16 {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  /* Skills section */
+  .grid.grid-cols-1.md\:grid-cols-2.gap-8 {
+    gap: 1rem;
+  }
+  
+  /* Experience timeline */
+  .absolute.left-1\/2.transform.-translate-x-1\/2.w-16.h-16 {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .w-14.h-14 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .w-16.h-16 img, .w-14.h-14 img, .w-10.h-10 {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  /* Projects and education cards */
+  .bg-gray-900.rounded-lg.p-6 {
+    padding: 1rem;
+  }
+  
+  /* Contact form */
+  .max-w-xl.mx-auto.bg-gray-900.bg-opacity-80.rounded-xl.p-8 {
+    padding: 1.5rem;
+  }
+  
+  /* Footer */
+  footer .flex.justify-center.space-x-8 {
+    gap: 1.5rem;
+  }
+  
+  /* Typography adjustments */
+  h1.text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  h2.text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  h3.text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  p.text-xl {
+    font-size: 1.125rem;
+  }
+  
+  /* Fix timeline spacing */
+  .flex.flex-col.md\:flex-row.justify-between.items-center.mb-24,
+  .flex.flex-col.md\:flex-row-reverse.justify-between.items-center.mb-24 {
+    margin-bottom: 3rem;
+  }
+  
+  /* Fix achievements grid */
+  .grid.grid-cols-1.md\:grid-cols-3.gap-8 > div {
+    margin-bottom: 1rem;
+  }
+  
+  /* Add some additional spacing */
+  .min-h-screen {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  
+  /* Fix for the video background */
+  video.absolute {
+    object-fit: cover;
+    height: 100vh;
+    position: fixed;
+  }
+}
+
+/* Additional small screen adjustments */
+@media only screen and (max-width: 480px) {
+  main .text-6xl {
+    font-size: 2rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .flex.flex-wrap.gap-2 {
+    gap: 0.5rem;
+  }
+  
+  .flex.flex-wrap.gap-4 {
+    gap: 0.75rem;
+  }
+  
+  .bg-gray-800.rounded-full.px-5.py-2 {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+    </style>
 </head>
 
 <body class="relative min-h-screen overflow-x-hidden m-0 p-0 bg-black">
