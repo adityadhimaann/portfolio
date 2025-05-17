@@ -6,156 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @media only screen and (max-width: 768px) {
-  /* Navbar adjustments */
-  nav {
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  nav .absolute {
-    position: relative;
-    left: 0;
-    transform: none;
-    width: 100%;
-    margin: 1rem 0;
-  }
-  
-  nav .flex.space-x-8 {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
-  }
-  
-  nav a.flex.mr-10 {
-    margin-right: 0;
-    margin-top: 1rem;
-    justify-content: center;
-  }
-  
-  /* Main section adjustments */
-  main {
-    padding: 2rem 1rem;
-  }
-  
-  main img {
-    width: 60%;
-    margin: 0 auto 2rem;
-  }
-  
-  main a.mt-16 {
-    width: 100%;
-    margin-top: 2rem;
-  }
-  
-  /* Skills section */
-  .grid.grid-cols-1.md\:grid-cols-2.gap-8 {
-    gap: 1rem;
-  }
-  
-  /* Experience timeline */
-  .absolute.left-1\/2.transform.-translate-x-1\/2.w-16.h-16 {
-    width: 3rem;
-    height: 3rem;
-  }
-  
-  .w-14.h-14 {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  
-  .w-16.h-16 img, .w-14.h-14 img, .w-10.h-10 {
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  /* Projects and education cards */
-  .bg-gray-900.rounded-lg.p-6 {
-    padding: 1rem;
-  }
-  
-  /* Contact form */
-  .max-w-xl.mx-auto.bg-gray-900.bg-opacity-80.rounded-xl.p-8 {
-    padding: 1.5rem;
-  }
-  
-  /* Footer */
-  footer .flex.justify-center.space-x-8 {
-    gap: 1.5rem;
-  }
-  
-  /* Typography adjustments */
-  h1.text-5xl {
-    font-size: 2.5rem;
-  }
-  
-  h2.text-3xl {
-    font-size: 1.75rem;
-  }
-  
-  h3.text-2xl {
-    font-size: 1.5rem;
-  }
-  
-  p.text-xl {
-    font-size: 1.125rem;
-  }
-  
-  /* Fix timeline spacing */
-  .flex.flex-col.md\:flex-row.justify-between.items-center.mb-24,
-  .flex.flex-col.md\:flex-row-reverse.justify-between.items-center.mb-24 {
-    margin-bottom: 3rem;
-  }
-  
-  /* Fix achievements grid */
-  .grid.grid-cols-1.md\:grid-cols-3.gap-8 > div {
-    margin-bottom: 1rem;
-  }
-  
-  /* Add some additional spacing */
-  .min-h-screen {
-    min-height: auto;
-    padding: 3rem 0;
-  }
-  
-  /* Fix for the video background */
-  video.absolute {
-    object-fit: cover;
-    height: 100vh;
-    position: fixed;
-  }
-}
-
-/* Additional small screen adjustments */
-@media only screen and (max-width: 480px) {
-  main .text-6xl {
-    font-size: 2rem;
-  }
-  
-  .text-3xl {
-    font-size: 1.5rem;
-  }
-  
-  .text-2xl {
-    font-size: 1.25rem;
-  }
-  
-  .flex.flex-wrap.gap-2 {
-    gap: 0.5rem;
-  }
-  
-  .flex.flex-wrap.gap-4 {
-    gap: 0.75rem;
-  }
-  
-  .bg-gray-800.rounded-full.px-5.py-2 {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-  }
-}
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="relative min-h-screen overflow-x-hidden m-0 p-0 bg-black">
@@ -168,617 +19,902 @@
     <div class="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
 
     <!-- Navbar -->
-    <nav class="w-full p-6 flex items-center justify-between text-white">
-        <!-- Left: Logo -->
-        <div class="text-3xl font-bold">aditya</div>
+    <nav class="nav-container">
+        <!-- Decorative cyberpunk grid background -->
+        <div class="nav-grid"></div>
 
-        <!-- Center: Navigation Links -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
-            <a href="#projects" class="text-sm hover:text-gray-300 transition-colors">PROJECTS</a>
-            <a href="#certifications" class="text-sm hover:text-gray-300 transition-colors">CERTIFICATIONS</a>
-            <a href="#achievements" class="text-sm hover:text-gray-300 transition-colors">ACHIEVEMENTS</a>
+        <!-- Left: Logo with typing cursor effect -->
+        <div class="logo">aditya</div>
+
+        <!-- Center: Navigation Links with hover effects -->
+        <div class="nav-links">
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#certifications" class="nav-link">CERTIFICATIONS</a>
+            <a href="#achievements" class="nav-link">ACHIEVEMENTS</a>
         </div>
 
-        <!-- Right: GitHub Link -->
-        <a href="https://github.com/adityadhimaann" target="_blank" rel="noopener noreferrer"
-            class="flex mr-10 items-center">
-            <img class="w-10 h-10"
+        <!-- Right: GitHub Link with hover animation -->
+        <a href="https://github.com/adityadhimaann" target="_blank" rel="noopener noreferrer" class="github-link">
+            <img class="github-icon"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png"
                 alt="GitHub Logo">
-            <span class="mt-1 ml-2 text-md hover:text-gray-300 transition-colors">
-                GitHub
-            </span>
+            <span class="github-text">GitHub</span>
         </a>
-
-
     </nav>
 
 
     <!-- Main Section -->
+    <!-- Profile Section with CSS Animations -->
     <main
-        class="flex flex-col md:flex-row items-start justify-center px-6 md:px-24 py-20 space-y-10 md:space-y-0 md:space-x-16">
-        <!-- Profile Image -->
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQEAQ1IbUpbpKA/profile-displayphoto-shrink_800_800/B56ZZYTii0GQAg-/0/1745238241871?e=1751500800&v=beta&t=aaJp9UJD9nm-kgFZf2nklrYhijWG1GBWhGCb4VIMLtI" alt="Aditya"
-            class="border-4 border-indigo-400  shadow-lg w-[30%] h-[30%] rounded-full p-2 ml-0 md:ml-16 md:mt-24">
-
-        <!-- About Me Text -->
-        <div class="flex flex-col text-center md:text-left">
-            <h1 class="text-white font-extrabold text-6xl mb-6 mt-8 md:mt-24">About Me</h1>
-            <p class="text-white font-extralight text-xl max-w-2xl">
-                I am a passionate web developer and designer with a strong grasp of creating modern, user-friendly
-                websites.
-                Always eager to learn and innovate, I love turning ideas into functional and visually appealing digital
-                experiences.
-                Looking for opportunities to contribute my skills, grow, and build impactful web solutions.
-            </p>
-            <a target="_blank"
-                class="mt-16 bg-gradient-to-l w-[50%] hover:scale-105 duration-500 text-center p-4 rounded-full from-purple-300 via-blue-700 to-violet-500 text-2xl font-bold text-white whitespace-nowrap"
-                href="https://drive.google.com/file/d/1sgUDASh8dEa7rtMDzRyP_i53s88a3L8z/view?usp=sharing">Check
-                Resume</a>
+        class="flex pt-36 flex-col md:flex-row items-start justify-center px-6 md:px-24 py-20 space-y-10 md:space-y-0 md:space-x-16 profile-container">
+        <!-- Profile Image with Animation -->
+        <div class="profile-image-container relative w-full md:w-auto flex justify-center">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQEAQ1IbUpbpKA/profile-displayphoto-shrink_800_800/B56ZZYTii0GQAg-/0/1745238241871?e=1751500800&v=beta&t=aaJp9UJD9nm-kgFZf2nklrYhijWG1GBWhGCb4VIMLtI"
+                alt="Aditya"
+                class="profile-image border-4 border-indigo-400 shadow-lg w-64 h-64 rounded-full p-2 ml-0 md:ml-16 md:mt-24 object-cover">
+            <div class="profile-ring"></div>
         </div>
 
+        <!-- About Me Text with Animations -->
+        <div class="flex flex-col text-center md:text-left about-content">
+            <h1 class="text-white font-extrabold text-6xl mb-6 mt-8 md:mt-24 title-animate">About Me</h1>
+            <p class="text-white font-extralight text-xl max-w-2xl text-animate1">
+                I am a <span class="text-highlight1">passionate web developer</span> and designer with a strong grasp of
+                creating modern, user-friendly
+                websites.
+                Always eager to learn and innovate, I love turning ideas into <span class="text-highlight">functional
+                    and visually appealing</span> digital
+                experiences.
+                Looking for opportunities to contribute my skills, grow, and build <span
+                    class="text-highlight">impactful web solutions</span>.
+            </p>
+            <a target="_blank"
+                class="mt-16 bg-gradient-to-l hover:scale-105 duration-500 text-center p-4 rounded-full from-purple-300 via-blue-700 to-violet-500 text-2xl font-bold text-white whitespace-nowrap button-animate w-64 md:w-72 mx-auto md:mx-0"
+                href="https://drive.google.com/file/d/1tImAIar9tIZDvOofhHad51ZBF9WBNfWl/view?usp=drive_link">
+                <span class="button-text">Check Resume</span>
+                <span class="button-icon">→</span>
+            </a>
+        </div>
     </main>
-    <div class="min-h-screen bg-black bg-[url('https://img.freepik.com/free-photo/panoramic-view-sunset-night_23-2148933764.jpg?t=st=1745756526~exp=1745760126~hmac=f0d1993726724f3cc3219da9b74ce92dc14a3477d4603d7626dd70a5dda295bb&w=2000')] bg-opacity-95 text-white py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <!-- Heading -->
-            <h1 class="text-5xl font-bold text-center mb-4">Skills</h1>
-            <p class="text-xl text-gray-400 text-center mb-12">Here are some of my skills on which I have been working
-                on for the past 2 years.</p>
+    <!-- Main Content Container -->
+    <div class="min-h-screen bg-gray-950 text-white py-16 px-4 relative overflow-hidden skills-container">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="code-rain"></div>
+            <div class="grid-overlay"></div>
+        </div>
 
-            <!-- Skills Grid -->
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Heading with Animation -->
+            <div class="text-center mb-16 reveal-text">
+                <h1 class="text-5xl font-bold mb-4 glitch-text" data-text="Skills">Skills</h1>
+                <p class="text-xl text-blue-400 typing-text">Professional capabilities I've mastered over the past 2
+                    years</p>
+            </div>
+
+            <!-- Skills Grid with Hover Effects -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Frontend Section -->
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                    <h2 class="text-3xl font-semibold mb-6 text-center">Frontend</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-400">⚛️</span>
-                            <span>React Js</span>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h2 class="text-3xl font-semibold mb-6 text-center">Frontend</h2>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <div class="skill-pill" data-skill="React">
+                                    <span class="text-blue-400">⚛️</span>
+                                    <span>React Js</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Next">
+                                    <span class="bg-white text-black p-1 rounded">N</span>
+                                    <span>Next Js</span>
+                                </div>
+                                <div class="skill-pill" data-skill="HTML">
+                                    <span class="text-orange-500">🛡️</span>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skill-pill" data-skill="CSS">
+                                    <span class="text-blue-500">🔤</span>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skill-pill" data-skill="JavaScript">
+                                    <span class="bg-yellow-500 text-black p-1 rounded">JS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Bootstrap">
+                                    <span class="text-purple-500">B</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Flutter">
+                                    <span class="text-blue-400">📱</span>
+                                    <span>Flutter</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-black bg-white p-1 rounded">N</span>
-                            <span>Next Js</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-orange-500">🛡️</span>
-                            <span>HTML</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-500">🔤</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="bg-yellow-500 text-black p-1 rounded">JS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-purple-500">B</span>
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-400">📱</span>
-                            <span>Flutter</span>
+                        <div class="skill-card-back">
+                            <div class="skill-meter" data-skill="React" data-level="90"></div>
+                            <div class="skill-meter" data-skill="Next.js" data-level="85"></div>
+                            <div class="skill-meter" data-skill="HTML/CSS" data-level="95"></div>
+                            <div class="skill-meter" data-skill="JavaScript" data-level="90"></div>
+                            <div class="skill-meter" data-skill="Bootstrap" data-level="80"></div>
+                            <div class="skill-meter" data-skill="Flutter" data-level="75"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Backend Section -->
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                    <h2 class="text-3xl font-semibold mb-6 text-center">Backend</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-green-500">🟢</span>
-                            <span>Node Js</span>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h2 class="text-3xl font-semibold mb-6 text-center">Backend</h2>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <div class="skill-pill" data-skill="Node">
+                                    <span class="text-green-500">🟢</span>
+                                    <span>Node Js</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Express">
+                                    <span class="text-gray-300">⚙️</span>
+                                    <span>Express Js</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Flask">
+                                    <span>🧪</span>
+                                    <span>Flask</span>
+                                </div>
+                                <div class="skill-pill" data-skill="MySQL">
+                                    <span class="text-blue-400">🐬</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="skill-pill" data-skill="PostgreSQL">
+                                    <span class="text-blue-500">🐘</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div class="skill-pill" data-skill="MongoDB">
+                                    <span class="text-green-500">🍃</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-gray-300">⚙️</span>
-                            <span>Express Js</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span>Flask</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-400">🐬</span>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-500">🐘</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-green-500">🍃</span>
-                            <span>MongoDB</span>
+                        <div class="skill-card-back">
+                            <div class="skill-meter" data-skill="Node.js" data-level="85"></div>
+                            <div class="skill-meter" data-skill="Express.js" data-level="80"></div>
+                            <div class="skill-meter" data-skill="Flask" data-level="70"></div>
+                            <div class="skill-meter" data-skill="MySQL" data-level="85"></div>
+                            <div class="skill-meter" data-skill="PostgreSQL" data-level="75"></div>
+                            <div class="skill-meter" data-skill="MongoDB" data-level="85"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- UI/UX Section -->
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                    <h2 class="text-3xl font-semibold mb-6 text-center">UI/UX</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-600">☕</span>
-                            <span>Java</span>
+                <div class="skill-card" data-category="uiux">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h2 class="text-3xl font-semibold mb-6 text-center">UI/UX</h2>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <div class="skill-pill" data-skill="Java">
+                                    <span class="text-blue-600">☕</span>
+                                    <span>Java</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Kotlin">
+                                    <span class="text-blue-500">K</span>
+                                    <span>Kotlin</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Jetpack">
+                                    <span class="text-green-500">🎨</span>
+                                    <span>Jetpack Compose</span>
+                                </div>
+                                <div class="skill-pill" data-skill="XML">
+                                    <span class="text-orange-500">📄</span>
+                                    <span>XML</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Android">
+                                    <span class="text-blue-400">🤖</span>
+                                    <span>Android Studio</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-500">K</span>
-                            <span>Kotlin</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-green-500">🎨</span>
-                            <span>Jetpack Compose</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-orange-500">📄</span>
-                            <span>XML</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-400">🤖</span>
-                            <span>Android Studio</span>
+                        <div class="skill-card-back">
+                            <div class="skill-meter" data-skill="Java" data-level="80"></div>
+                            <div class="skill-meter" data-skill="Kotlin" data-level="75"></div>
+                            <div class="skill-meter" data-skill="Jetpack Compose" data-level="70"></div>
+                            <div class="skill-meter" data-skill="XML" data-level="85"></div>
+                            <div class="skill-meter" data-skill="Android Studio" data-level="80"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Others Section -->
-                <div
-                    class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                    <h2 class="text-3xl font-semibold mb-6 text-center">Others</h2>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-red-500">🔄</span>
-                            <span>Git</span>
+                <div class="skill-card" data-category="others">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <h2 class="text-3xl font-semibold mb-6 text-center">Others</h2>
+                            <div class="flex flex-wrap justify-center gap-4">
+                                <div class="skill-pill" data-skill="Git">
+                                    <span class="text-red-500">🔄</span>
+                                    <span>Git</span>
+                                </div>
+                                <div class="skill-pill" data-skill="GitHub">
+                                    <span class="text-white">🐙</span>
+                                    <span>GitHub</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Netlify">
+                                    <span class="text-teal-500">🌐</span>
+                                    <span>Netlify</span>
+                                </div>
+                                <div class="skill-pill" data-skill="VSCode">
+                                    <span class="text-blue-500">⚙️</span>
+                                    <span>VS Code</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Postman">
+                                    <span class="text-orange-500">🚀</span>
+                                    <span>Postman</span>
+                                </div>
+                                <div class="skill-pill" data-skill="Figma">
+                                    <span class="text-purple-500">🎨</span>
+                                    <span>Figma</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-white">🐙</span>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-teal-500">🌐</span>
-                            <span>Netlify</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-blue-500">⚙️</span>
-                            <span>VS Code</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-orange-500">🚀</span>
-                            <span>Postman</span>
-                        </div>
-                        <div class="bg-gray-800 rounded-full px-5 py-2 flex items-center gap-2">
-                            <span class="text-purple-500">🎨</span>
-                            <span>Figma</span>
+                        <div class="skill-card-back">
+                            <div class="skill-meter" data-skill="Git" data-level="90"></div>
+                            <div class="skill-meter" data-skill="GitHub" data-level="85"></div>
+                            <div class="skill-meter" data-skill="Netlify" data-level="80"></div>
+                            <div class="skill-meter" data-skill="VS Code" data-level="95"></div>
+                            <div class="skill-meter" data-skill="Postman" data-level="85"></div>
+                            <div class="skill-meter" data-skill="Figma" data-level="75"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="min-h-screen bg-black bg-[url('https://img.freepik.com/free-photo/panoramic-view-sunset-night_23-2148933764.jpg?t=st=1745756526~exp=1745760126~hmac=f0d1993726724f3cc3219da9b74ce92dc14a3477d4603d7626dd70a5dda295bb&w=2000')] text-white py-16 px-4">
+    <!-- Main Experience Section Tag -->
+    <div class="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white py-16 px-4 overflow-x-hidden">
         <div class="max-w-6xl mx-auto">
-            <!-- Heading -->
-            <h1 class="text-5xl font-bold text-center -mt-[10%]">Experience</h1>
-            <p class="text-xl text-gray-400 text-center mb-16">My work experience as a software engineer and working on
-                different companies and projects.</p>
+            <!-- Animated Heading -->
+            <div class="text-center mb-20 reveal-text">
+                <h1 class="text-5xl font-bold gradient-text">Experience</h1>
+                <p class="text-xl text-gray-400 mt-4 fade-in-up">My work experience as a software engineer across
+                    different companies and projects.</p>
+            </div>
 
             <!-- Timeline Container -->
-            <div class="relative">
-                <!-- Vertical Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-white"></div>
+            <div class="relative timeline-container">
+                <!-- Animated Timeline Line -->
+                <div class="timeline-line"></div>
 
-                <!-- Timeline Items -->
                 <!-- First Experience Item -->
-                <div class="flex flex-col md:flex-row justify-between items-center mb-24 relative">
-                    <!-- Left Content (on larger screens) -->
-                    <div class="md:w-5/12 mb-8 md:mb-0 md:pr-8">
-                        <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div
+                            class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-glow hover:shadow-glow-intense transition-all duration-500">
                             <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 card-float">
                                     <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGk7LpwLG6nkQ/company-logo_200_200/company-logo_200_200/0/1719257552819/bharat_intern_logo?e=2147483647&v=beta&t=Bv7Jz-Rw1JuWxeFQ6pB8eXJk57hC8Z9y8MZ60f7KjiE"
-                                        alt="Bluestocks logo" class="w-12 rounded-lg h-12" />
+                                        alt="Bharat Intern logo" class="w-10 h-10 rounded-lg" />
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold">Frontend Intern</h3>
+                                    <h3
+                                        class="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                                        Frontend Intern</h3>
                                     <p class="text-gray-400">Bharat Intern</p>
                                     <p class="text-gray-400 text-sm">November 2023</p>
                                 </div>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                I worked as a Frontend Engineer Intern at Bharat Intern, where I am gaining hands-on
-                                experience in building and maintaining web pages. I am working with a team of talented
-                                developers to create innovative solutions that meet the needs of our clients. I am also
-                                learning new technologies and tools to enhance my skills as a software engineer.
+                                I worked as a Frontend Engineer Intern at Bharat Intern, where I gained hands-on
+                                experience in building and maintaining web pages. I worked with a team of talented
+                                developers to create innovative solutions that meet the needs of our clients. I also
+                                learned new technologies and tools to enhance my skills as a software engineer.
                             </p>
                             <div class="mt-4">
-                                <p class="font-semibold text-gray-300">Skills</p>
-                                <div class="flex flex-wrap gap-2 text-gray-400 mt-2">
-                                    <span>• HTML</span>
-                                    <span>• CSS</span>
-                                    <span>• JavaScript</span>
+                                <p
+                                    class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+                                    Skills</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="skill-pill">HTML</span>
+                                    <span class="skill-pill">CSS</span>
+                                    <span class="skill-pill">JavaScript</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center z-10">
-                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center">
+                    <div class="timeline-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="inner-circle bg-purple-600">
                             <img src="https://media.cakeresume.com/image/upload/s--G0ZEDWiW--/c_pad,fl_png8,h_400,w_400/v1690610004/gdvljgmtcbsiglzxd0oe.png"
-                                alt="Company logo" class="w-16 rounded-full h-16" />
+                                alt="Company logo" class="w-8 h-8 rounded-full" />
                         </div>
                     </div>
 
-                    <!-- Right Date (on larger screens) -->
-                    <div class="md:w-5/12 md:pl-8 text-center md:text-left">
-                        <h3 class="text-xl font-semibold">November 2023</h3>
+                    <div class="timeline-date right">
+                        <h3 class="text-xl font-semibold text-glow">November 2023</h3>
                     </div>
                 </div>
 
-                <!-- Second Experience Item (Reversed) -->
-                <div class="flex flex-col md:flex-row-reverse justify-between items-center mb-24 relative">
-                    <!-- Right Content (on larger screens) -->
-                    <div class="md:w-5/12 mb-8 md:mb-0 md:pl-8">
-                        <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <!-- Second Experience Item -->
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-date left">
+                        <h3 class="text-xl font-semibold text-glow">September - October 2023</h3>
+                    </div>
+
+                    <!-- Timeline Dot -->
+                    <div class="timeline-dot">
+                        <div class="pulse-ring"></div>
+                        <div class="inner-circle bg-blue-500">
+                            <img src="https://play-lh.googleusercontent.com/8t6U6HGuMnP1DAJYpb4U_fEwVA7fgaOBJYRyfPHM5OLZllGj-8tsmJhu6Y4ikMrGpZg"
+                                alt="AWS logo" class="w-8 h-8 rounded-full" />
+                        </div>
+                    </div>
+
+                    <div class="timeline-content">
+                        <div
+                            class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 shadow-glow hover:shadow-glow-intense transition-all duration-500">
                             <div class="flex items-center mb-4">
-                                <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-4 card-float">
                                     <img src="https://play-lh.googleusercontent.com/8t6U6HGuMnP1DAJYpb4U_fEwVA7fgaOBJYRyfPHM5OLZllGj-8tsmJhu6Y4ikMrGpZg"
-                                        alt="AWS Cloud Club logo" class="w-12 rounded-lg h-12" />
+                                        alt="AWS Cloud Club logo" class="w-10 h-10 rounded-lg" />
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-semibold">Student Ambassador</h3>
+                                    <h3
+                                        class="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                                        Student Ambassador</h3>
                                     <p class="text-gray-400">ISP Member</p>
                                     <p class="text-gray-400 text-sm">September - October 2023</p>
                                 </div>
                             </div>
                             <p class="text-gray-300 mb-4">
                                 Being an ISP is not just a title; it's a commitment to bridging the gap between students
-                                and opportunities. Through this program, I am gaining invaluable skills in leadership,
+                                and opportunities. Through this program, I gained invaluable skills in leadership,
                                 marketing, and communication, all while helping my peers discover amazing internships
                                 and trainings that can shape their careers.
                             </p>
                             <div class="mt-4">
-                                <p class="font-semibold text-gray-300">Skills</p>
-                                <div class="flex flex-wrap gap-2 text-gray-400 mt-2">
-                                    <span>• Leadership</span>
-                                    <span>• Team Management</span>
+                                <p
+                                    class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">
+                                    Skills</p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="skill-pill">Leadership</span>
+                                    <span class="skill-pill">Team Management</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects Section -->
+    <div id="projects"
+        class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-16 px-4 relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="tech-circles"></div>
+        </div>
 
-                    <!-- Timeline Dot -->
-                    <div
-                        class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center z-10">
-                        <div class="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center">
-                            <img src="https://play-lh.googleusercontent.com/8t6U6HGuMnP1DAJYpb4U_fEwVA7fgaOBJYRyfPHM5OLZllGj-8tsmJhu6Y4ikMrGpZg"
-                                alt="AWS logo" class="w-10 rounded-full h-10" />
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Heading with animation -->
+            <div class="text-center mb-16 reveal-text">
+                <h1 class="text-6xl font-bold mb-4 glitch-text" data-text="Projects">Projects</h1>
+                <p class="text-xl text-indigo-300 max-w-2xl mx-auto">Here are some projects I've worked on that showcase
+                    my skills and creativity.</p>
+                <div class="w-24 h-1 bg-indigo-500 mx-auto mt-8 pulse-animation"></div>
+            </div>
+
+            <!-- Projects Grid with hover effects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 perspective-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front bg-gradient-to-br from-blue-900 to-indigo-900 rounded-xl">
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="text-4xl tech-icon">🚚</span>
+                            </div>
+                            <div class="p-8">
+                                <h2 class="text-3xl font-bold mb-2">FleetTrack</h2>
+                                <div class="w-16 h-1 bg-indigo-400 mb-6"></div>
+                                <p class="text-lg text-gray-300">Real-time vehicle tracking system</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back bg-gradient-to-br from-indigo-800 to-blue-900 rounded-xl p-8">
+                            <h2 class="text-2xl font-semibold mb-4">FleetTrack</h2>
+                            <p class="text-gray-300 mb-6">
+                                A real-time vehicle tracking and management system built using HTML, CSS, and JavaScript
+                                with PHP and MySQL for backend database management.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-badge bg-blue-800">HTML</span>
+                                <span class="tech-badge bg-yellow-600">JavaScript</span>
+                                <span class="tech-badge bg-purple-700">PHP</span>
+                                <span class="tech-badge bg-blue-600">CSS</span>
+                                <span class="tech-badge bg-blue-500">MySQL</span>
+                            </div>
+                            <a href="https://adityadhimaann.github.io/fleettrack/" class="view-btn">
+                                <span>View Project</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Left Date (on larger screens) -->
-                    <div class="md:w-5/12 md:pr-8 text-center md:text-right">
-                        <h3 class="text-xl font-semibold">September - October 2023</h3>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front bg-gradient-to-br from-purple-900 to-indigo-900 rounded-xl">
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="text-4xl tech-icon">⚙️</span>
+                            </div>
+                            <div class="p-8">
+                                <h2 class="text-3xl font-bold mb-2">CPU Scheduler</h2>
+                                <div class="w-16 h-1 bg-purple-400 mb-6"></div>
+                                <p class="text-lg text-gray-300">Algorithm calculator for CPU scheduling</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back bg-gradient-to-br from-indigo-800 to-purple-900 rounded-xl p-8">
+                            <h2 class="text-2xl font-semibold mb-4">CPU Scheduler Algorithm Calculator</h2>
+                            <p class="text-gray-300 mb-6">
+                                A smart calculator for computing various CPU scheduling algorithms in operating systems,
+                                built with JavaScript for operations and HTML/Tailwind for UI.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-badge bg-yellow-600">JavaScript</span>
+                                <span class="tech-badge bg-blue-800">HTML</span>
+                                <span class="tech-badge bg-blue-600">CSS</span>
+                                <span class="tech-badge bg-blue-400">Tailwind</span>
+                            </div>
+                            <a href="https://adityadhimaann.github.io/CpuScheduler/" class="view-btn">
+                                <span>View Project</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front bg-gradient-to-br from-green-900 to-blue-900 rounded-xl">
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="text-4xl tech-icon">💪</span>
+                            </div>
+                            <div class="p-8">
+                                <h2 class="text-3xl font-bold mb-2">Fitness-and-Sports</h2>
+                                <div class="w-16 h-1 bg-green-400 mb-6"></div>
+                                <p class="text-lg text-gray-300">Gym tools and exercise management</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back bg-gradient-to-br from-blue-800 to-green-900 rounded-xl p-8">
+                            <h2 class="text-2xl font-semibold mb-4">Fitness-and-Sports</h2>
+                            <p class="text-gray-300 mb-6">
+                                A website for managing gym tools and exercise routines. Secured top 10 position in the
+                                CodeBlocks Hackathon 2021 with this project.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-badge bg-yellow-600">JavaScript</span>
+                                <span class="tech-badge bg-blue-800">HTML</span>
+                                <span class="tech-badge bg-blue-600">CSS</span>
+                            </div>
+                            <a href="https://adityadhimaann.github.io/Fitness-and-Sports/" class="view-btn">
+                                <span>View Project</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-card-inner">
+                        <div class="project-card-front bg-gradient-to-br from-red-900 to-purple-900 rounded-xl">
+                            <div class="absolute top-0 right-0 p-4">
+                                <span class="text-4xl tech-icon">🤖</span>
+                            </div>
+                            <div class="p-8">
+                                <h2 class="text-3xl font-bold mb-2">AIVA</h2>
+                                <div class="w-16 h-1 bg-red-400 mb-6"></div>
+                                <p class="text-lg text-gray-300">AI Virtual Assistant for anxiety relief</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back bg-gradient-to-br from-purple-800 to-red-900 rounded-xl p-8">
+                            <h2 class="text-2xl font-semibold mb-4">AIVA - AI Virtual Assistant</h2>
+                            <p class="text-gray-300 mb-6">
+                                An anxiety relief chatbot that helps users reduce stress through exercises, meditation
+                                ideas, and relaxation techniques. Built with OpenAI's API.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tech-badge bg-blue-800">HTML</span>
+                                <span class="tech-badge bg-blue-400">TailwindCSS</span>
+                                <span class="tech-badge bg-yellow-600">JavaScript</span>
+                                <span class="tech-badge bg-green-600">OpenAI API</span>
+                            </div>
+                            <a href="https://adityadhimaann.github.io/AIVA-Anxiety-Relief-Chatbot/" class="view-btn">
+                                <span>View Project</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="min-h-screen bg-black bg-[url('https://img.freepik.com/free-photo/panoramic-view-sunset-night_23-2148933764.jpg?t=st=1745756526~exp=1745760126~hmac=f0d1993726724f3cc3219da9b74ce92dc14a3477d4603d7626dd70a5dda295bb&w=2000')] bg-opacity-95 text-white py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <!-- Projects Section -->
-<div id="projects" class="min-h-screen  bg-[url('')] bg-opacity-95 text-white py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-        <!-- Heading -->
-        <h1 class="text-5xl font-bold text-center mb-4">Projects</h1>
-        <p class="text-xl text-gray-400 text-center mb-12">Here are some projects I've worked on that showcase my skills and creativity.</p>
 
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <h2 class="text-2xl font-semibold mb-4">FleetTrack</h2>
-                <p class="text-gray-300 mb-6">
-                    A real-time vehicle tracking and management system built using HTML, CSS, and JavaScript with PHP and MySQL for backend database management.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-blue-800 rounded-full text-sm">HTML</span>
-                    <span class="px-3 py-1 bg-yellow-600 rounded-full text-sm">JavaScript</span>
-                    <span class="px-3 py-1 bg-purple-700 rounded-full text-sm">PHP</span>
-                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CSS</span>
-                    <span class="px-3 py-1 bg-blue-500 rounded-full text-sm">MySQL</span>
-                </div>
-                <a href="https://adityadhimaann.github.io/fleettrack/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
-                    View Project
-                </a>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <h2 class="text-2xl font-semibold mb-4">CPU Scheduler Algorithm Calculator</h2>
-                <p class="text-gray-300 mb-6">
-                    A smart calculator for computing various CPU scheduling algorithms in operating systems, built with JavaScript for operations and HTML/Tailwind for UI.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-yellow-600 rounded-full text-sm">JavaScript</span>
-                    <span class="px-3 py-1 bg-blue-800 rounded-full text-sm">HTML</span>
-                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CSS</span>
-                    <span class="px-3 py-1 bg-blue-400 rounded-full text-sm">Tailwind</span>
-                </div>
-                <a href="https://adityadhimaann.github.io/CpuScheduler/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
-                    View Project
-                </a>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <h2 class="text-2xl font-semibold mb-4">Fitness-and-Sports</h2>
-                <p class="text-gray-300 mb-6">
-                    A website for managing gym tools and exercise routines. Secured top 10 position in the CodeBlocks Hackathon 2021 with this project.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-yellow-600 rounded-full text-sm">JavaScript</span>
-                    <span class="px-3 py-1 bg-blue-800 rounded-full text-sm">HTML</span>
-                    <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CSS</span>
-                </div>
-                <a href="https://adityadhimaann.github.io/Fitness-and-Sports/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
-                    View Project
-                </a>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <h2 class="text-2xl font-semibold mb-4">AIVA - AI Virtual Assistant</h2>
-                <p class="text-gray-300 mb-6">
-                    An anxiety relief chatbot that helps users reduce stress through exercises, meditation ideas, and relaxation techniques. Built with OpenAI's API.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1 bg-blue-800 rounded-full text-sm">HTML</span>
-                    <span class="px-3 py-1 bg-blue-400 rounded-full text-sm">TailwindCSS</span>
-                    <span class="px-3 py-1 bg-yellow-600 rounded-full text-sm">JavaScript</span>
-                    <span class="px-3 py-1 bg-green-600 rounded-full text-sm">OpenAI API</span>
-                </div>
-                <a href="https://adityadhimaann.github.io/AIVA-Anxiety-Relief-Chatbot/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
-                    View Project
-                </a>
-            </div>
+    <!-- Education Section -->
+    <div id="education" class="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-16 px-4 relative">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shapes"></div>
         </div>
-    </div>
-</div>
 
-<!-- Education Section -->
-<div id="education" class="min-h-screen bg-opacity-95 text-white py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-        <!-- Heading -->
-        <h1 class="text-5xl font-bold text-center mb-4">Education</h1>
-        <p class="text-xl text-gray-400 text-center mb-12">My academic journey and qualifications.</p>
-
-        <!-- Education Timeline -->
-        <div class="relative">
-            <!-- Vertical Timeline Line -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-white"></div>
-
-            <!-- First Education Item -->
-            <div class="flex flex-col md:flex-row justify-between items-center mb-24 relative">
-                <!-- Left Content -->
-                <div class="md:w-5/12 mb-8 md:mb-0 md:pr-8">
-                    <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
-                        <h3 class="text-2xl font-semibold mb-2">Lovely Professional University</h3>
-                        <p class="text-indigo-400 mb-2">Bachelor's in Computer Science and Engineering</p>
-                        <p class="text-gray-300 mb-4">Current CGPA: 6.5</p>
-                        <p class="text-gray-300 mb-4">
-                            Pursuing my degree with a focus on software development, web technologies, and computer science fundamentals.
-                        </p>
-                        <p class="text-gray-400">Jalandhar, Punjab</p>
-                    </div>
-                </div>
-
-                <!-- Timeline Dot -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center z-10">
-                    <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center">
-                        <span class="text-white text-2xl">🎓</span>
-                    </div>
-                </div>
-
-                <!-- Right Date -->
-                <div class="md:w-5/12 md:pl-8 text-center md:text-left">
-                    <h3 class="text-xl font-semibold">August 2023 - June 2027</h3>
-                </div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <!-- Heading with animation -->
+            <div class="text-center mb-20 reveal-text">
+                <h1 class="text-6xl font-bold mb-4 glitch-text" data-text="Education">Education</h1>
+                <p class="text-xl text-indigo-300 max-w-2xl mx-auto">My academic journey and qualifications.</p>
+                <div class="w-24 h-1 bg-indigo-500 mx-auto mt-8 pulse-animation"></div>
             </div>
 
-            <!-- Second Education Item -->
-            <div class="flex flex-col md:flex-row-reverse justify-between items-center mb-24 relative">
-                <!-- Right Content -->
-                <div class="md:w-5/12 mb-8 md:mb-0 md:pl-8">
-                    <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
-                        <h3 class="text-2xl font-semibold mb-2">New Standard Public School</h3>
-                        <p class="text-indigo-400 mb-2">Intermediate Degree</p>
-                        <p class="text-gray-300 mb-4">Percentage: 90%</p>
-                        <p class="text-gray-300 mb-4">
-                            Completed my intermediate education with focus on science and mathematics.
-                        </p>
-                        <p class="text-gray-400">Raebareli, Uttar Pradesh</p>
+            <!-- Education Timeline with animated cards -->
+            <div class="relative education-timeline">
+                <!-- Vertical Timeline Line -->
+                <div
+                    class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 via-indigo-500 to-blue-500 rounded-full glow-line">
+                </div>
+
+                <!-- First Education Item -->
+                <div class="education-item left-item mb-32 opacity-0">
+                    <div class="flex flex-col md:flex-row justify-between items-center relative">
+                        <!-- Left Content -->
+                        <div class="md:w-5/12 mb-8 md:mb-0 md:pr-8">
+                            <div
+                                class="edu-card bg-gradient-to-br from-indigo-900 to-blue-900 rounded-xl p-8 shadow-glow">
+                                <h3 class="text-2xl font-semibold mb-2">Lovely Professional University</h3>
+                                <div class="w-16 h-1 bg-indigo-500 mb-4"></div>
+                                <p class="text-indigo-300 mb-2 text-lg">Bachelor's in Computer Science and Engineering
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="px-3 py-1 bg-indigo-700 rounded-lg text-sm mr-2">Current CGPA: 6.5</div>
+                                    <div class="flex items-center text-yellow-400">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">
+                                    Pursuing my degree with a focus on software development, web technologies, and
+                                    computer science fundamentals.
+                                </p>
+                                <div class="flex items-center text-gray-400">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Jalandhar, Punjab</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 timeline-dot">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center z-10 shadow-glow animate-pulse">
+                                <span class="text-white text-2xl">🎓</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Date -->
+                        <div class="md:w-5/12 md:pl-8 text-center md:text-left">
+                            <div class="date-badge">
+                                <span class="text-xl font-semibold">August 2023 - June 2027</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Timeline Dot -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center z-10">
-                    <div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center">
-                        <span class="text-white text-2xl">📚</span>
-                    </div>
-                </div>
+                <!-- Second Education Item -->
+                <div class="education-item right-item opacity-0">
+                    <div class="flex flex-col md:flex-row-reverse justify-between items-center relative">
+                        <!-- Right Content -->
+                        <div class="md:w-5/12 mb-8 md:mb-0 md:pl-8">
+                            <div
+                                class="edu-card bg-gradient-to-br from-green-900 to-blue-900 rounded-xl p-8 shadow-glow">
+                                <h3 class="text-2xl font-semibold mb-2">New Standard Public School</h3>
+                                <div class="w-16 h-1 bg-green-500 mb-4"></div>
+                                <p class="text-green-300 mb-2 text-lg">Intermediate Degree</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="px-3 py-1 bg-green-700 rounded-lg text-sm mr-2">Percentage: 90%</div>
+                                    <div class="flex items-center text-yellow-400">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">
+                                    Completed my intermediate education with focus on science and mathematics.
+                                </p>
+                                <div class="flex items-center text-gray-400">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span>Raebareli, Uttar Pradesh</span>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Left Date -->
-                <div class="md:w-5/12 md:pr-8 text-center md:text-right">
-                    <h3 class="text-xl font-semibold">2022 - 2023</h3>
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 timeline-dot">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center z-10 shadow-glow animate-pulse">
+                                <span class="text-white text-2xl">📚</span>
+                            </div>
+                        </div>
+
+                        <!-- Left Date -->
+                        <div class="md:w-5/12 md:pr-8 text-center md:text-right">
+                            <div class="date-badge">
+                                <span class="text-xl font-semibold">2022 - 2023</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Achievements Section -->
-<div id="achievements" class="min-h-screen  bg-opacity-95 text-white py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-        <!-- Heading -->
-        <h1 class="text-5xl font-bold text-center mb-4">Achievements</h1>
-        <p class="text-xl text-gray-400 text-center mb-12">Recognition and accomplishments throughout my journey.</p>
+    <!-- Achievements Section with Advanced Animations -->
+<div id="achievements" class="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white py-20 px-4 overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="achievements-particles"></div>
+    </div>
+    
+    <!-- Content Container -->
+    <div class="max-w-6xl mx-auto relative z-10">
+        <!-- Heading with Animation -->
+        <div class="text-center mb-16 achievement-heading">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">Achievements</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Recognition and accomplishments throughout my journey.</p>
+        </div>
 
-        <!-- Achievements Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Achievements Grid with Staggered Animation -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 achievements-container">
             <!-- Achievement 1 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">🏆</span>
+            <div class="achievement-card" data-delay="0">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-yellow-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">🏆</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">CodeBlocks Hackathon</h3>
+                    <p class="text-gray-300 text-center">
+                        Achieved Top 10 position in the CodeBlocks Hackathon 2021 for building a responsive
+                        Fitness-and-Sports website.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">CodeBlocks Hackathon</h3>
-                <p class="text-gray-300 text-center">
-                    Achieved Top 10 position in the CodeBlocks Hackathon 2021 for building a responsive Fitness-and-Sports website.
-                </p>
             </div>
 
             <!-- Certification 1 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">🎖️</span>
+            <div class="achievement-card" data-delay="100">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-blue-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">🎖️</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">Responsive Web Design</h3>
+                    <p class="text-gray-300 text-center">
+                        Certification from FreeCodeCamp in Responsive Web Design principles and practices.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">Responsive Web Design</h3>
-                <p class="text-gray-300 text-center">
-                    Certification from FreeCodeCamp in Responsive Web Design principles and practices.
-                </p>
             </div>
 
             <!-- Certification 2 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">📜</span>
+            <div class="achievement-card" data-delay="200">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">📜</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">Computer Networking</h3>
+                    <p class="text-gray-300 text-center">
+                        "The Bits and Bytes of Computer Networking" certification from Coursera.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">Computer Networking</h3>
-                <p class="text-gray-300 text-center">
-                    "The Bits and Bytes of Computer Networking" certification from Coursera.
-                </p>
             </div>
 
             <!-- Certification 3 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">🔍</span>
+            <div class="achievement-card" data-delay="300">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-green-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">🔍</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">Computer Communication</h3>
+                    <p class="text-gray-300 text-center">
+                        Certification from Coursera focusing on computer communication principles.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">Computer Communication</h3>
-                <p class="text-gray-300 text-center">
-                    Certification from Coursera focusing on computer communication principles.
-                </p>
             </div>
 
             <!-- Certification 4 -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">💻</span>
+            <div class="achievement-card" data-delay="400">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-red-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">💻</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">Cross-platform app with .NET MAUI</h3>
+                    <p class="text-gray-300 text-center">
+                        Microsoft certification for developing cross-platform applications using .NET MAUI.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">Cross-platform app with .NET MAUI</h3>
-                <p class="text-gray-300 text-center">
-                    Microsoft certification for developing cross-platform applications using .NET MAUI.
-                </p>
             </div>
 
             <!-- Brand Ambassador -->
-            <div class="bg-gray-900 bg-opacity-80 rounded-xl p-8 hover:scale-105 duration-500 border-2 border-gray-500">
-                <div class="flex justify-center mb-6">
-                    <div class="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center">
-                        <span class="text-4xl">🌟</span>
+            <div class="achievement-card" data-delay="500">
+                <div class="bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm rounded-2xl p-8 h-full border border-gray-700 achievement-inner">
+                    <div class="achievement-icon-container mb-8">
+                        <div class="w-24 h-24 mx-auto relative">
+                            <div class="absolute inset-0 bg-indigo-500 rounded-full opacity-20 animate-pulse"></div>
+                            <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                <span class="text-4xl">🌟</span>
+                            </div>
+                        </div>
                     </div>
+                    <h3 class="text-2xl font-semibold text-center mb-4">Brand Ambassador</h3>
+                    <p class="text-gray-300 text-center">
+                        Served as a Student Ambassador at Internshala, representing the platform on campus and
+                        enhancing leadership skills.
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold text-center mb-4">Brand Ambassador</h3>
-                <p class="text-gray-300 text-center">
-                    Served as a Student Ambassador at Internshala, representing the platform on campus and enhancing leadership skills.
-                </p>
             </div>
         </div>
     </div>
 </div>
 
-            <!-- Heading -->
-            <h1 class="text-5xl font-bold text-center mb-4">Contact</h1>
-            <p class="text-xl text-gray-400 text-center mb-12">Feel free to reach out to me for any questions or
-                opportunities!</p>
-
-            <!-- Contact Form Card -->
-            <div class="max-w-xl mx-auto bg-gray-900 bg-opacity-80 rounded-xl p-8">
-                <h2 class="text-2xl font-bold mb-6 flex items-center">
-                    Email Me
-                    <span class="ml-2">🚀</span>
-                </h2>
-
-                <!-- Email Field -->
-                <div class="mb-4">
-                    <input type="email"
-                        class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500"
-                        placeholder="Your Email" required />
-                </div>
-
-                <!-- Name Field -->
-                <div class="mb-4">
-                    <input type="text"
-                        class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500"
-                        placeholder="Your Name" required />
-                </div>
-
-                <!-- Subject Field -->
-                <div class="mb-4">
-                    <input type="text"
-                        class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500"
-                        placeholder="Subject" required />
-                </div>
-
-                <!-- Message Field -->
-                <div class="mb-6">
-                    <textarea
-                        class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500 h-32 resize-none"
-                        placeholder="Message" required></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit"
-                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300">
-                    Send
-                </button>
-            </form>
-            </div>
-        </div>
+    <!-- Main Contact Section with Animations -->
+<main class="min-h-screen py-16 px-4 contact-container relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div class="particle-container">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
     </div>
-    <!-- Footer (optional) -->
-    <footer class="w-full py-6 text-center text-white bg-gradient-to-tr from-black via-violet-900 to-black  bg-opacity-80">
-        <div class="flex justify-center space-x-8 mb-6">
-            <a href="mailto:dhimanaditya56@gmail.com" class="text-gray-300 hover:text-white transition duration-300">
-                <span class="text-2xl"><img class="w-8 h-8" src="https://img.icons8.com/color/512/gmail-new.png" alt=""></span>
-            </a>
-            <a href="https://github.com/adityadhimaann" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
-                <span class="text-2xl"><img class="w-8 h-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt=""></span>
-            </a>
-            <a href="https://www.linkedin.com/in/adityadhimaann/" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
-                <span class="text-2xl"><img class="h-10 w-10 -mt-1" src="https://static.vecteezy.com/system/resources/previews/023/986/926/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt=""></span>
-            </a>
-            <a href="tel:+916306580926" class="text-gray-300 hover:text-white transition duration-300">
-                <span class="text-2xl"><img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/7044/7044707.png" alt=""></span>
-            </a>
-        </div>
-        <p>© 2025 Aditya Kumar. All rights reserved.</p>
-    </footer>
+    
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+  
+    <!-- Heading with typing animation -->
+    <h1 class="text-5xl font-bold text-center mb-4 relative z-10 glitch-text" data-text="Contact">Contact</h1>
+    <p class="text-xl text-indigo-300 text-center mb-12 relative z-10 typing-text">Feel free to reach out to me for any questions or opportunities!</p>
+  
+    <!-- Contact Form Card with Frame animation -->
+    <div class="max-w-xl mx-auto bg-gray-900 bg-opacity-60 backdrop-blur-md rounded-xl p-8 relative z-10 card-container">
+      <!-- Animated corners -->
+      <div class="corner-tl corner"></div>
+      <div class="corner-tr corner"></div>
+      <div class="corner-bl corner"></div>
+      <div class="corner-br corner"></div>
+      
+      <!-- Scan line effect -->
+      <div class="scan-line"></div>
+  
+      <h2 class="text-2xl font-bold mb-6 flex items-center text-indigo-400">
+        <span class="pulse-icon mr-2">📧</span> Email Me
+      </h2>
+  
+      <!-- Email Field with focus animation -->
+      <div class="mb-4 input-container">
+        <input type="email"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300"
+            placeholder="Your Email" required />
+        <div class="input-highlight"></div>
+      </div>
+  
+      <!-- Name Field -->
+      <div class="mb-4 input-container">
+        <input type="text"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300"
+            placeholder="Your Name" required />
+        <div class="input-highlight"></div>
+      </div>
+  
+      <!-- Subject Field -->
+      <div class="mb-4 input-container">
+        <input type="text"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300"
+            placeholder="Subject" required />
+        <div class="input-highlight"></div>
+      </div>
+  
+      <!-- Message Field -->
+      <div class="mb-6 input-container">
+        <textarea
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 text-gray-300 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-300 h-32 resize-none"
+            placeholder="Message" required></textarea>
+        <div class="input-highlight"></div>
+      </div>
+  
+      <!-- Submit Button with hover effect -->
+      <button type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 button-glow relative overflow-hidden">
+        <span class="relative z-10">Send Message</span>
+      </button>
+    </div>
+  
+    <!-- Social Links with hover animations -->
+    <div class="mt-12 flex justify-center space-x-8 relative z-10">
+      <a href="mailto:dhimanaditya56@gmail.com" class="social-icon-container">
+        <img class="w-10 h-10 social-icon" src="https://img.icons8.com/color/512/gmail-new.png" alt="Email">
+        <span class="social-tooltip">Email</span>
+      </a>
+      <a href="https://github.com/adityadhimaann" target="_blank" class="social-icon-container">
+        <img class="w-10 h-10 social-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" alt="GitHub">
+        <span class="social-tooltip">GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/aditya-dhiman" target="_blank" class="social-icon-container">
+        <img class="h-10 w-10 social-icon" src="https://static.vecteezy.com/system/resources/previews/023/986/926/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn">
+        <span class="social-tooltip">LinkedIn</span>
+      </a>
+      <a href="tel:+916306580926" class="social-icon-container">
+        <img class="w-10 h-10 social-icon" src="https://cdn-icons-png.flaticon.com/512/7044/7044707.png" alt="Phone">
+        <span class="social-tooltip">Call</span>
+      </a>
+    </div>
+  
+    <!-- Copyright with glow effect -->
+    <p class="mt-12 text-center text-gray-400 relative z-10 copyright-text">© 2025 Aditya Kumar. All rights reserved.</p>
+  </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
